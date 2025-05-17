@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tense Detector</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Tense Detector</h1>
+    <form id="tense-form">
+      <textarea id="sentence" placeholder="Enter a sentence..."></textarea>
+      <button type="submit">Detect Tense</button>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
+
+  <!-- Inline script for functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('tense-form');
+      const sentenceInput = document.getElementById('sentence');
+      const resultDiv = document.getElementById('result');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const text = sentenceInput.value.trim();
+        if (!text) {
+          resultDiv.textContent = 'Please enter a sentence.';
+          return;
+        }
+
+        try {
+          // Use relative path now that UI and API share origin
+          const response = await fetch('/detect-tense', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text })
+          });
+
+          if (!response.ok) {
+            const err = await response.json();
+            throw new Error(err.error || 'Request failed');
+          }
+
+          const { tense } = await response.json();
+          resultDiv.textContent = `Detected Tense: ${tense}`;
+        } catch (error) {
+          resultDiv.textContent = `Error: ${error.message}`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
