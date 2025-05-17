@@ -6,9 +6,6 @@ The **Tense Detector** is a powerful Natural Language Processing (NLP) tool that
 It’s an excellent project for learning and exploring how NLP techniques like tokenization, part-of-speech tagging, and linguistic grammar rules can be used to solve real-world language problems.
 
 
-![screenshot](sc.png)
-
-
 ---
 
 ## 🛠️ Tech Stack
@@ -26,6 +23,11 @@ It’s an excellent project for learning and exploring how NLP techniques like t
 - **Tokenization**: Breaks sentences into words for detailed analysis.
 - **POS Tagging**: Identifies parts of speech (e.g., verbs) crucial for tense detection.
 - **Grammar-based Rules**: A set of predefined rules to determine the tense based on verb forms.
+
+---
+
+## 💡 Screenshot
+<img src="sc.png" alt="screenshot" width="400"/>
 
 ---
 
