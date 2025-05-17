@@ -27,8 +27,10 @@ It’s an excellent project for learning and exploring how NLP techniques like t
 ---
 
 ## 💡 Screenshot
-<img src="sc.png" alt="screenshot" width="400"/>
 
+<div align="center">
+  <img src="sc.png" alt="Tense Detector Screenshot" width="600"/>
+</div>
 ---
 
 ## 🚀 How to Use
