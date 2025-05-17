@@ -16,6 +16,13 @@ It’s an excellent project for learning and exploring how NLP techniques like t
 
 ---
 
+## 💡 Screenshot
+
+<div align="center">
+  <img src="/Tenses-main/sc.png" alt="Tense Detector Screenshot" width="600"/>
+</div>
+---
+
 ## 🎯 Features
 
 - **Tense Detection**: Detects the tense of a given sentence: **past, present, or future**.
