@@ -5,6 +5,10 @@ The **Tense Detector** is a powerful Natural Language Processing (NLP) tool that
 
 It’s an excellent project for learning and exploring how NLP techniques like tokenization, part-of-speech tagging, and linguistic grammar rules can be used to solve real-world language problems.
 
+
+![screenshot](sc.png)
+
+
 ---
 
 ## 🛠️ Tech Stack
